@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>JIS College Home Page</title>
+      <!-- <link rel="stylesheet" href="css/style.css"> -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   </head>
+   <body>
+        <!-- CSS PART -->
+        <style>
+           /********** Common CSS Starts **********/  
+* {
+    margin:0px;
+    padding:0px;
+}
+body, html {
+    font-family: Roboto, sans-serif, arial;
+    background:#f0f3fa; 
+}
+.width-100 {
+    width:100%;
+    float:left;
+}
+.width-20 {
+    width:20%;
+    float:left;
+}
+.width-25 {
+    width:25%;
+    float:left;
+}
+.width-30 {
+    width:30%;
+    float:left;
+}
+.width-33 {
+    width:33%;
+    float:left;
+}
+.width-40 {
+    width:40%;
+    float:left;
+}
+.width-50 {
+    width:50%;
+    float:left;
+}
+.width-60 {
+    width:60%;
+    float:left;
+}
+.width-70 {
+    width:70%;
+    float:left;
+}
+.width-80 {
+    width:80%;
+    float:left;
+}
+.width-90 {
+    width:90%;
+    float:left;
+}
+.width-10 {
+    width:10%;
+    float:left;
+}
+.container {
+    width:1500px;
+    margin:0 auto;
+}
+.plr {
+    padding-left:100px;
+    padding-right:100px;
+}
+.margin-top-50 {
+    margin-top:50px;
+}
+/********** Common CSS Ends **********/ 
+/********** Top Header Starts **********/  
+.header {
+    background-color:#ffffff2b;
+    padding:5px 0px;
+    border-bottom: 1px solid #3131315e;
+}
+.head-left ul {
+    list-style:none;
+    float:left;
+}
+.head-left ul li {
+    border-right: 1px solid rgba(14, 13, 13, 0.3);
+    border-left: 1px solid rgba(14, 13, 13, 0.3);
+    float: left;
+    padding: 15px;
+    color: white;
+}
+.head-left ul li a {
+    color:rgb(28, 17, 17);
+    text-decoration:none;
+}
+.notification {
+    padding-top: 17px;
+    color: rgb(15, 5, 5);
+}
+.notification span img {
+    height: 14px;
+    width: 30px;
+}
+.notification span {
+    padding-right: 5px;
+}
+.head-right ul {
+    list-style:none;
+    float: right;
+}
+.head-right ul li {
+    border-right: 1px solid rgba(17, 7, 7, 0.3);
+    border-left: 1px solid rgba(14, 7, 7, 0.3);
+    float: left;
+    padding: 15px;
+    color: rgb(255, 253, 253);
+}
+.head-right ul li a {
+    color:rgb(19, 13, 13);
+    text-decoration:none;
+}
+.head-span img {
+    height: 14px;
+    width: 30px;
+}
+/********** Top Header Ends **********/
+/********** Logo And Menu Starts **********/  
+.header-menu {
+    position: relative;
+    box-shadow: 0px 2px 5px 0px #00000036;
+}
+.logo {
+    width: fit-content;
+    float: left;
+}
+
+.main-menu {
+    list-style:none;
+    float:right;
+    margin-top: 20px;
+}
+.main-menu a {
+    font-weight: 500;
+    color: #2e2d2d;
+    font-size: 20px;
+    text-decoration: none;
+}
+.main-menu li {
+    float:left;
+    padding:12px 15px;
+}
+.main-menu .dropdown li{
+    display: flex;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  z-index: 1;
+  opacity: 0; /* Set initial opacity to 0 */
+  transition: opacity 12s ease-in-out; /* Add transition effect */
+}
+.dropbtn::after {
+    content: "\25BC"; /* Unicode character for down arrow */
+    display: inline-block;
+    margin-left: 5px; /* adjust as needed */
+    vertical-align: middle; /* align arrow in middle */
+  }
+  
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1; /* Set opacity to 1 on hover */
+}
+
+
+.dropdown-content a {
+        display: block;
+        padding: 10px;
+        color: #000;
+        text-decoration: none;
+      }
+      
+.dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+      
+.sub-menu {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        min-width: 200px;
+        background-color: #fff;
+      }
+      
+.sub-menu a {
+        display: block;
+        padding: 10px;
+        color: #000;
+        text-decoration: none;
+      }
+      
+      .sub-menu a:hover {
+        background-color: #f1f1f1;
+      }
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      .sub-menu-trigger::after {
+        content: "\2192"; /* Unicode character for down arrow */
+        display: inline-block;
+        margin-left: 5px; /* adjust as needed */
+      }
+      
+      
+      .sub-menu-trigger:hover + .sub-menu {
+        display: block;
+      }
+      
+      
+/********** Logo And Menu Ends **********/
+/********** Slider Starts **********/  
+.slider-width{
+    width:100%;
+    height: 544px;
+}
+/********** Slider Ends **********/
+/********** Latest News, Event, Notice Board Starts **********/  
+.latest-news{
+    margin-left:10px;
+    margin-right:10px;
+    background:#fff;
+    padding:20px;
+    height:350px;
+    margin-bottom:30px;
+}
+.event-list{
+    margin-left:10px;
+    margin-right:10px;
+    background:#fff;
+    padding:20px;
+    height:350px;
+    margin-bottom:30px;
+}
+.notice-board{
+    margin-left:10px;
+    margin-right:10px;
+    background:#fff;
+    padding:20px;
+    height:350px;
+    margin-bottom:30px;
+}
+.our-principal{
+    margin-left:10px;
+    margin-right:10px;
+    background:#fff;
+    padding:20px;
+    height:522px;
+    margin-bottom:30px;
+}
+.about-us{
+    margin-left:10px;
+    margin-right:10px;
+    background:#fff;
+    padding:20px;
+    height:513px;
+    margin-bottom:30px;
+}
+.certificate{
+    margin-left:10px;
+    margin-right:10px;
+    background:#fff;
+    padding:20px;
+    height:350px;
+    margin-bottom:30px;
+}
+.certificate img{
+    margin-left: 20px;
+}
+.heading-sect{
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid #cfcfcf;
+    padding-bottom: 0px;
+    margin: 0px;
+    margin-bottom: 15px;
+    padding-top: 2px;
+    border: 1px solid #cfcfcf;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-left: 15px;
+    background: #00aed9;
+    color:white;
+}
+.heading-sect h3{
+    color:white;
+}
+.head-title {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family :'Roboto', sans-serif!important;
+    color: #2196f3;
+    padding-bottom: 5px;
+}
+.upcoming-event-list li {
+    width: 100%;
+    float: left;
+    margin-bottom: 15px;
+}
+.upcoming-event-list{
+    padding:0px;
+   list-style:none;
+}
+.event-date {
+    background: #03a9f4;
+    width: 30px;
+    float: left;
+    text-align: center;
+    font-size:14px;
+    color: #fff;
+    padding:8px;
+    margin-right: 10px;
+}
+.notice-board-list li {
+    width: 100%;
+    float: left;
+    margin-bottom: 15px;
+}
+.notice-board-list{
+    padding:0px;
+    list-style:none;
+}
+.latest-news-ul{
+    padding:0px;
+   list-style:none;
+   line-height: 40px;
+}
+/********** Latest News, Event, Notice Board Ends **********/
+/********** Information Starts **********/  
+.useful-info-ul{
+    list-style:none;
+}
+.useful-info-ul p{
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+}
+.useful-info-ul li{
+    margin-bottom:15px;
+    padding-bottom: 15px;
+}
+.principal-image{
+    text-align:center 
+}
+.principal-image img{
+    height:230px;
+}
+.principal-para{
+    font-weight:bold;
+}
+/********** Information Ends **********/
+/********** Recruiter List Starts **********/  
+.recruiter-head-style{
+    font-size: 28px;
+    color: #4b4848;
+    margin-bottom: 5px;
+}
+.recruiter-marquee{
+    height: 100px;
+}
+.recruiter-marquee img{
+    height:80px;
+    width:140px;
+    margin-right: 10px;
+}
+/********** Recruiter List Ends **********/
+/********** Gallery Starts **********/  
+.gallery-img{
+    height:250px;
+    width:100%;
+}
+.governor-section{
+    padding: 0px;
+}
+.governor-img{
+    width:100%;
+}
+.governor-name{
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    padding-left: 10px;
+    margin-top: 20px;
+}
+.governor-designation{
+    font-size: 15px;
+    color: black;
+    padding-left: 10px;
+    margin-top: 6px;
+}
+.gove-sec-style{
+    margin-bottom: 30px;
+    border-bottom: 1px solid #d7d7d7;
+    padding-bottom: 30px;
+}
+.gallery-head-style{
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 5px;
+    border: 1px solid #cfcfcf;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-left: 20px;
+    background: #03a9f4;
+    border: none;
+    padding: 2px 0px;
+}
+/********** Gallery Ends **********/
+/********** Footer Starts **********/  
+.footer {
+    background: #232F3E;
+    padding: 50px 0px;
+}
+.quicklink-menu {
+    list-style:none;
+    padding-left: 10px;
+}
+.quicklink-menu li a {
+    color: #fff;
+    line-height: 2.5;
+    font-size: 15px;
+    text-decoration:none;
+}
+.social-media {
+    list-style:none;
+    margin-top:10px;
+}
+.social-media li a img {
+    width:30px;
+}
+.social-media li {
+    float:left;
+    padding:0px 8px;
+}
+.quicklink-heading {
+    font-size:18px;
+    font-weight:bold;
+    color:#fff;
+    margin-bottom:10px;
+}
+.get-in-touch {
+    list-style:none;
+    padding-left: 10px;
+}
+.get-in-touch li i {
+    color: #ed372c;
+    font-size: 20px;
+}
+.get-in-touch li {
+    color: #fff;
+    line-height: 2.5;
+    font-size: 15px;
+    text-decoration:none;
+}
+.footer-e-mail {
+    font-size:15px;
+    font-weight:bold;
+    color:#fff;
+    text-decoration:none;
+}
+.footer-website {
+    font-size:12px;
+    font-weight:bold;
+    color:#fff;
+    text-decoration:none;
+}
+/********** Footer Ends **********/
+/********** Footer Copyright Starts **********/  
+.footer2-bacbor {
+    background: #232F3E;
+    padding:10px 0px;
+    border-top: 1px solid #898989;
+}
+.footer2-content {
+    font-size:14px;
+    color:#fff;
+    text-align:center;
+}
+/********** Footer Copyright Ends **********/
+    </style>
+
+<!---------- Top Header Starts --------->
+<div class="width-100 header">
+    <div class="container ">
+       <div class="width-25 head-left">
+          <ul>
+             <li><a href="#"><i class="fa fa-lock"></i> Staff Login</a></li>
+             <li><a href="#"><i class="fa fa-lock"></i> Student Login</a></li>
+          </ul>
+       </div>
+       <div class="width-50">
+          <marquee class="notification">
+             <span><img src="images/new.gif"></span> Examnination Notification <span><img src="images/new.gif"></span> Get Ready To Explore The Genius In You With Genius 2023 <span><img src="images/new.gif"></span> Enrollment Form Notification 2022 23 Batch
+          </marquee>
+       </div>
+       <div class="width-25 head-right">
+        <ul>
+           <li><a href="#"><i class="fa fa-comment"></i> Admission Open <span class="head-span"><img src="images/new.gif"></span></a></li>
+           <li><a href="#"><i class="fa fa-rss"></i> Blogs</a></li>
+        </ul>
+     </div>
+  </div>
+</div>
+ <!---------- Top Header Ends --------->
+ <!---------- Logo And Main Menu HTML Starts --------->
+ <div class="width-100 header-menu">
+    <div class="container">
+       <div class="logo"> <img src="images/logo.png"> </div>
+       <ul class="main-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Department</a>
+            <div class="dropdown-content">
+              <a href="#" class="sub-menu-trigger">B.Tech</a>
+              <div class="sub-menu">
+                <a href="#">Computer Science Engineering</a>
+                <a href="#">Information Technology</a>
+                <a href="#">Electrical Engineering</a>
+                <a href="#">Civil Engineering</a>
+                <a href="#">Mechanical Engineering</a>
+                <a href="#">Bio-Medical Engineering</a>
+                <a href="#">Electronics&Communication Engineering</a>
+              </div>
+              <a href="#" class="sub-menu-trigger">BCA</a>
+              <div class="sub-menu">
+                <a href="#">Computer Application</a>
+              </div>
+              <a href="#" class="sub-menu-trigger">General Courses</a>
+              <div class="sub-menu">
+                <a href="#">Physics</a>
+                <a href="#">Chemistry</a>
+                <a href="#">Materials Science</a>
+                <a href="#">Statics and Dynamics</a>
+                <a href="#">Electrical Circuits</a>
+                <a href="#">Technical Writing and Communication Skills</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="#">Faculty</a></li>
+          <li><a href="#">Research</a></li>
+          <li><a href="#">Placement</a></li>
+          <li><a href="#">Contact Us</a></li>
+       </ul>
+    </div>
+ </div>
+
+
+<!-- <div class="width-100 header-menu">
+    <div class="container">
+       <div class="logo"> <img src="images/logo.png"> </div>
+       <ul class="main-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Department</a></li>
+          <li><a href="#">Faculty</a></li>
+          <li><a href="#">Research</a></li>
+          <li><a href="#">Placement</a></li>
+          <li><a href="#">Contact Us</a></li>
+       </ul>
+    </div>
+ </div> -->
+ <!---------- Logo And Main Menu HTML Ends --------->
+ <!---------- Slider HTML Starts --------->
+<div class="width-100">
+    <img class="slider-width slider" src="images/Campus.jpg">
+    </div>
+    <!---------- Slider HTML Ends --------->
+
+    <div class="width-100 margin-top-50">
+        <div class="container">
+          <div class="width-33">
+            <div class="latest-news">
+              <div class="heading-sect">
+                <h3 class="head-title">Latest New</h3>
+              </div>
+              <marquee direction="up">
+              <ul class="latest-news-ul">
+                <li> 18 May 2023 to 21 may 2023 2nd internal <img src="images/new.gif"></li>
+                <li> 31 May 2023 Ph D merit list Part 02_16 feb 2023 <img src="images/new.gif"> </li>
+                <li> 24 May 2023 Incubation Center <img src="images/new.gif"></li>
+                <li> 31 May 2023 Instituitional Distinctiveness <img src="images/new.gif"></li>
+                <li> 21 June 2023 Academic Calender Session 2022-23 <img src="images/new.gif"></li>
+                <li> 16 Sep 2023 Ph D merit list Part 01_16 feb 2023 <img src="images/new.gif"></li>
+                <li> 18 Sep 2023 Ph D merit list Part 02_16 feb 2023 <img src="images/new.gif"></li>
+                <li> 17 Oct 2023 Consolidate academic Calender <img src="images/new.gif"></li>
+              </ul>
+              </marquee>
+            </div>
+          </div>
+      
+          <div class="width-33">
+            <div class="event-list">
+              <div class="heading-sect">
+                <h3 class="head-title">Upcoming Events</h3>
+              </div>
+              <ul class="upcoming-event-list">
+                <li><span class="event-date">29 <br>
+                  April</span><span> Seminar is conducted on BCA courses.</span> </li>
+                <li><span class="event-date">30 <br>
+                  April</span><span> Seminar is conducted on B.com courses.</span> </li>
+                <li><span class="event-date">2 <br>
+                  Mar</span><span> Conducted its 2nd convocation ceremony.</span> </li>
+                <li><span class="event-date">5 <br>
+                  Mar</span><span> Annual Meeting for Batch of BBA ( 2018 to 2021 ) and seminar will be conducted for future growth and oppurtunity.</span> </li>
+              </ul>
+            </div>
+          </div>
+      
+          <div class="width-33">
+            <div class="notice-board">
+              <div class="heading-sect">
+                <h3 class="head-title">Notice Board</h3>
+              </div>
+              <ul class="notice-board-list">
+                <li><img src="images/folder.png">	Participation in Climate Correction Day (CCD) Challenge for Mission LiFE </li>
+                <li><img src="images/folder.png"> 	West Zone Inter University Table Teniss (man) Tournament 2022-23 </li>
+                <li><img src="images/folder.png"> 	PhD Registration Form for Selected Candidates </li>
+                <li><img src="images/folder.png"> 	List of Activities organised under TEQIP-III </li>
+                <li><img src="images/folder.png"> 	Documents for empanellment of vendor for A Class contyractor </li>
+                <li><img src="images/folder.png"> 	School of Architecture College Level counselling 2022-23  </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---------- Information HTML Starts --------->
+<div class="width-100">
+    <div class="container">
+       <div class="width-33">
+          <div class="our-principal">
+             <div class="heading-sect">
+                <h3 class="head-title"> Useful Information</h3>
+             </div>
+             <ul class="useful-info-ul">
+                <li><img src="images/service.jpg" height="200"> <p>Online Service</p></li>
+                <li><img src="images/service1.jpg" height="200"> <p>Online Results</p></li>
+                <!-- <li><img src="images/info-list-img3.png"> <a href="#">Exam Time Table</a></li>
+                <li><img src="images/info-list-img4.png"> <a href="#">Tenders</a></li> -->
+             </ul>
+          </div>
+       </div>
+       <div class="width-33">
+          <div class="about-us">
+             <div class="heading-sect">
+                <h3 class="head-title"> Hon'ble Governor of JIS</h3>
+             </div>
+             <div class="width-100 gove-sec-style">
+                <div class="width-40">
+                   <img class="governor-img" src="images/principal.jpg">
+                </div>
+                <div class="width-60">
+                   <p class="governor-name">Dr. Partha Sarkar</p>
+                   <p class="governor-designation">Principal, JIS College of Engineering</p>
+                </div>
+             </div>
+             <div class="width-40">
+                <img class="governor-img" src="images/chrman.jpg">
+             </div>
+             <div class="width-60">
+                <p class="governor-name">Late Sardar Jodh Singh</p>
+                <p class="governor-designation">Founder Chairman, JIS Group</p>
+             </div>
+          </div>
+       </div>
+       <div class="width-33">
+          <div class="certificate">
+             <div class="heading-sect">
+                <h3 class="head-title"> My College Certificate</h3>
+             </div>
+             <img src="images/certificate.jpg"  class="width-90"> 
+          </div>
+       </div>
+    </div>
+ </div>
+ <!---------- Information HTML Ends --------->
+ <!---------- Recruiter List HTML Starts --------->
+<div class="width-100 margin-top-50">
+    <div class="container">
+       <h3 class="recruiter-head-style">Top Recruiters Company</h3>
+       <marquee class="recruiter-marquee">
+          <img src="logo/Amazon.png">
+          <img src="logo/Wipro Technology.png">
+          <img src="logo/Tata.png">
+          <img src="logo/Deloitte.png">
+          <img src="logo/google.png">
+          <img src="logo/ibm.png">
+
+         
+       </marquee>
+    </div>
+ </div>
+ <!---------- Recruiter List HTML Ends --------->
+ <!---------- Gallery HTML Starts --------->
+<div class="width-100 margin-top-50">
+    <div class="container">
+       <h3 class="gallery-head-style">Gallery </h3>
+       <div class="width-25"><img src="images/g1.jpg" class="gallery-img"></div>
+       <div class="width-25"><img src="images/g2.jpg" class="gallery-img"></div>
+       <div class="width-25"><img src="images/g3.jpg" class="gallery-img"></div>
+       <div class="width-25"><img src="images/g4.jpg" class="gallery-img"></div>
+       <div class="width-25"><img src="images/g5.jpg" class="gallery-img"></div>
+       <div class="width-25"><img src="images/g6.jpg" class="gallery-img"></div>
+       <div class="width-25"><img src="images/g7.jpg" class="gallery-img"></div>
+       <div class="width-25"><img src="images/g8.jpg" class="gallery-img"></div>
+    </div>
+ </div>
+ <!---------- Gallery HTML Ends --------->
+
+ <!---------- Footer HTML Starts --------->
+<div class="width-100 margin-top-50 footer">
+    <div class="container">
+       <div class="width-25">
+          <h2 class="quicklink-heading">Quick Links</h2>
+          <ul class="quicklink-menu">
+             <li><a href="#">Home</a></li>
+             <li><a href="#">About us</a></li>
+             <li><a href="#">Gallery</a></li>
+             <li><a href="#">Contact Us</a></li>
+          </ul>
+       </div>
+       <div class="width-25">
+          <h2 class="quicklink-heading">Student Section</h2>
+          <ul class="quicklink-menu">
+             <li><a href="#">Result</a></li>
+             <li><a href="#">Pay Fee</a></li>
+             <li><a href="#">Training</a></li>
+             <li><a href="#">Placements</a></li>
+          </ul>
+       </div>
+       <div class="width-25">
+          <h2 class="quicklink-heading">Information Link</h2>
+          <ul class="quicklink-menu">
+             <li><a href="#">News</a></li>
+             <li><a href="#">R&D Policy</a></li>
+             <li><a href="#">Anti-Ragging</a></li>
+             <li><a href="#">Admission</a></li>
+          </ul>
+       </div>
+       <div class="width-25">
+          <h2 class="quicklink-heading">GET IN TOUCH</h2>
+          <ul class="get-in-touch">
+             <li><i class="fa fa-envelope-o" aria-hidden="true"></i> E-MAIL:<a href="#" class="footer-e-mail">jisce@jisgroup.org</a></li>
+             <li><i class="fa fa-headphones" aria-hidden="true"></i> WHATS-APP: +91 -123 456 789</li>
+             <li><i class="fa fa-fax" aria-hidden="true"></i> CONTACT NO.: +91 7894562311</li>
+             <li><i class="fa fa-globe" aria-hidden="true"></i> WEBSITE:<a href="#" class="footer-website">jisce.in</a></li>
+          </ul>
+          <ul class="social-media">
+             <li><a href="#"><img src="images/facebook.png"></a></li>
+             <li><a href="#"><img src="images/twitter.png"></a></li>
+             <li><a href="#"><img src="images/linkedin.png"></a></li>
+             <li><a href="#"><img src="images/instagram.png"></a></li>
+          </ul>
+       </div>
+    </div>
+ </div>
+ <!---------- Footer HTML Ends --------->
+ <!---------- Footer Copyright HTML Starts --------->
+<div class="width-100 footer2-bacbor">
+    <p class="footer2-content">Copyright @ 2023, JISCE All Rights Reserved</p>
+ </div>
+ </body>
+ </html>
+ <!---------- Footer Copyright HTML Ends --------->
+
